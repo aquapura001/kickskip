@@ -1,71 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webstore</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kickskip Store</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MyStore</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero" id="home">
-        <!-- Logo in top-left -->
-        <img src="T3.png" alt="MyStore Logo" class="hero-logo">
-        
-        <div class="hero-content">
-            <h1>Welcome to Our Store</h1>
-            <p>Discover amazing products at unbeatable prices</p>
-            <button class="btn">Shop Now</button>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <img src="T3.png" alt="Kickskip Logo" class="logo" />
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Streetwear<br><span>Redefined</span></h1>
+        <p>Premium kicks & apparel designed for comfort and style.</p>
+        <a href="#" class="btn-primary">Shop Collection</a>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-placeholder">Hero Image</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <div class="container">
+      <h2 class="section-title">Featured Drops</h2>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">Image</div>
+          <h3>Product Name</h3>
+          <p>$129.99</p>
+          <button>Add to Cart</button>
         </div>
-    </section>
 
-    <section class="products" id="products">
-        <h2>Featured Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-img">Product Image</div>
-                <h3>Product One</h3>
-                <p>High-quality item for everyday use</p>
-                <div class="price">$29.99</div>
-                <button class="btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-img">Product Image</div>
-                <h3>Product Two</h3>
-                <p>Premium selection with great features</p>
-                <div class="price">$49.99</div>
-                <button class="btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-img">Product Image</div>
-                <h3>Product Three</h3>
-                <p>Best seller - customers love it</p>
-                <div class="price">$39.99</div>
-                <button class="btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-img">Product Image</div>
-                <h3>Product Four</h3>
-                <p>Latest addition to our collection</p>
-                <div class="price">$59.99</div>
-                <button class="btn">Add to Cart</button>
-            </div>
+        <div class="product-card">
+          <div class="product-img">Image</div>
+          <h3>Product Name</h3>
+          <p>$149.99</p>
+          <button>Add to Cart</button>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2024 MyStore. All rights reserved.</p>
-    </footer>
+        <div class="product-card">
+          <div class="product-img">Image</div>
+          <h3>Product Name</h3>
+          <p>$99.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">Image</div>
+          <h3>Product Name</h3>
+          <p>$179.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter-box">
+      <h2>Join the Drop List</h2>
+      <p>Get early access to new releases.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© 2025 Kickskip</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
