@@ -1,4 +1,4 @@
-/* General Styles */
+/* -------------------- General Styles -------------------- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,11 +6,21 @@ body {
   color: #222;
 }
 
+h1, h2, h3 {
+  margin: 0 0 15px 0;
+}
+
 h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Header */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------- Header -------------------- */
 header {
   background: #fff;
   display: flex;
@@ -28,42 +38,52 @@ header .logo {
   font-size: 1.5rem;
 }
 
-header nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
+header nav {
+  display: flex;
+  gap: 15px;
 }
 
-/* Hero */
+header nav a {
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+/* -------------------- Hero Section -------------------- */
 .hero {
-  background: url('https://au.carboncoco.com/cdn/shop/files/hero-banner.jpg') center/cover no-repeat;
-  color: #fff;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: #000;
   text-align: center;
   padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* Correct "Shop Now" button */
 .hero button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
   padding: 15px 30px;
   font-size: 1rem;
-  background-color: #222;
-  color: #fff;
-  border: none;
   cursor: pointer;
-  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Featured Logos */
+.hero button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* -------------------- Featured Logos -------------------- */
 .featured-logos {
   display: flex;
   justify-content: center;
@@ -79,13 +99,13 @@ header nav a {
   opacity: 0.7;
 }
 
-/* Section Layout */
+/* -------------------- Section Layout -------------------- */
 .section {
   padding: 60px 5%;
   text-align: center;
 }
 
-/* Benefits */
+/* -------------------- Benefits -------------------- */
 .benefits .benefit-cards {
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +121,7 @@ header nav a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Products */
+/* -------------------- Products -------------------- */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -120,6 +140,7 @@ header nav a {
 
 .product-card img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -139,16 +160,23 @@ header nav a {
   margin-bottom: 15px;
 }
 
+/* Product card buttons */
 .product-card button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
   padding: 10px 20px;
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Testimonials */
+.product-card button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* -------------------- Testimonials -------------------- */
 .testimonials .testimonial-cards {
   display: flex;
   flex-wrap: wrap;
@@ -163,7 +191,7 @@ header nav a {
   border-radius: 8px;
 }
 
-/* FAQ */
+/* -------------------- FAQ -------------------- */
 .faq .faq-item {
   margin-bottom: 20px;
   text-align: left;
@@ -172,10 +200,11 @@ header nav a {
   margin-right: auto;
 }
 
-/* Newsletter */
+/* -------------------- Newsletter -------------------- */
 .newsletter form {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 15px;
 }
@@ -184,18 +213,25 @@ header nav a {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  flex: 1 1 200px;
 }
 
 .newsletter button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
   padding: 10px 20px;
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Footer */
+.newsletter button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* -------------------- Footer -------------------- */
 footer {
   background: #222;
   color: #fff;
@@ -209,18 +245,35 @@ footer a {
   margin: 0 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* -------------------- Responsive -------------------- */
+@media (max-width: 1200px) {
   .benefits .benefit-cards,
   .products,
-  .testimonials .testimonial-cards {
+  .testimonial-cards {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefits .benefit-cards,
+  .products,
+  .testimonial-cards {
     flex-direction: column;
     align-items: center;
   }
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
