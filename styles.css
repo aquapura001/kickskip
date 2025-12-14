@@ -68,10 +68,10 @@ header nav a {
 
 /* Correct "Shop Now" button */
 .hero button {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 6px;
+  background-color: #fff;      /* white fill */
+  color: #000;                 /* black text */
+  border: 2px solid #000;      /* black border */
+  border-radius: 6px;          /* rounded corners */
   padding: 15px 30px;
   font-size: 1rem;
   cursor: pointer;
@@ -79,8 +79,8 @@ header nav a {
 }
 
 .hero button:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #000;      /* black fill on hover */
+  color: #fff;                 /* white text on hover */
 }
 
 /* -------------------- Featured Logos -------------------- */
@@ -171,109 +171,5 @@ header nav a {
   transition: background 0.3s, color 0.3s;
 }
 
-.product-card button:hover {
-  background-color: #000;
-  color: #fff;
-}
+.product-card bu
 
-/* -------------------- Testimonials -------------------- */
-.testimonials .testimonial-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.testimonial-card {
-  width: 250px;
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* -------------------- FAQ -------------------- */
-.faq .faq-item {
-  margin-bottom: 20px;
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* -------------------- Newsletter -------------------- */
-.newsletter form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.newsletter input[type="email"] {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  flex: 1 1 200px;
-}
-
-.newsletter button {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 6px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.newsletter button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-/* -------------------- Footer -------------------- */
-footer {
-  background: #222;
-  color: #fff;
-  padding: 40px 5%;
-  text-align: center;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-/* -------------------- Responsive -------------------- */
-@media (max-width: 1200px) {
-  .benefits .benefit-cards,
-  .products,
-  .testimonial-cards {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .benefits .benefit-cards,
-  .products,
-  .testimonial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
